@@ -2,12 +2,13 @@ Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
 Version:	1.1.0
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	WSoundPrefs.desktop
+Patch:		WSoundPrefs-soundpaths.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
@@ -24,8 +25,9 @@ BuildRequires:	WSoundServer-devel
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix /usr/X11R6
-%define _mandir %{_prefix}/man
+%define 	_prefix 	/usr/X11R6
+%define 	_mandir 	%{_prefix}/man
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
@@ -44,6 +46,7 @@ o nazwie WMSound Setup (wmss).
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 xmkmf -a
@@ -51,11 +54,11 @@ make CDEBUGFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities 
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -76,4 +79,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
-/usr/X11R6/share/applnk/Utilities/WSoundPrefs.desktop
+%{_applnkdir}/Utilities/WSoundPrefs.desktop
