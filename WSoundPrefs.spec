@@ -2,7 +2,7 @@ Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
 Version:	1.1.0
-Release:	3
+Release: 4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -16,7 +16,7 @@ BuildRequires:	xpm-devel
 BuildRequires:	WindowMaker-devel >= 0.60.0
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
+BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
