@@ -3,12 +3,12 @@ Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
 Version:	1.1.0
 Release:	2
-Copyright:	GPL
+License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	WSoundPrefs.desktop
-Patch:		WSoundPrefs-soundpaths.patch
+Patch0:		WSoundPrefs-soundpaths.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
@@ -30,18 +30,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
-Sound Server (WMSound). It is actually a replacement of the Author's older
-program called WMSound Setup (aka wmss). Basically it provides the following
-options: 
-- Which sound to play on which sound-event 
-- Which sound-device to use 
-- What are the search-paths for Sounds and SoundSets 
+Sound Server (WMSound). It is actually a replacement of the Author's
+older program called WMSound Setup (aka wmss). Basically it provides
+the following options:
+- Which sound to play on which sound-event
+- Which sound-device to use
+- What are the search-paths for Sounds and SoundSets
 - Loading and Saving of Soundsets
 
 %description -l pl
 WSoundPrefs jest opartym na bibliotece WINGs konfiguratorem Serwera
-D¼wiêku WindowMakera (WMSound). Jest to nastêpca starszego programu
-o nazwie WMSound Setup (wmss). 
+D¼wiêku WindowMakera (WMSound). Jest to nastêpca starszego programu o
+nazwie WMSound Setup (wmss).
 
 %prep
 %setup -q
