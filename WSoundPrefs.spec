@@ -5,6 +5,7 @@ Version:	1.1.0
 Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
@@ -47,7 +48,7 @@ nazwie WMSound Setup (wmss).
 
 %build
 xmkmf -a
-%{__make} CDEBUGFLAGS="$RPM_OPT_FLAGS"
+%{__make} CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
