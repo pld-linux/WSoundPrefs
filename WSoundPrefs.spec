@@ -77,26 +77,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
 /etc/X11/applnk/Utilities/WSoundPrefs.desktop
-
-%changelog
-* Mon Jul 05 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [1.1.0-1]
-- updated to 1.1.0,
-- spec file cleanup.
-
-* Sun May 16 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [0.9.3-3]
-- modified a bit spec file for PLD use,
-- removed WSoundPrefs-0.9.3_config.patch,
-- fixed passing $RPM_OPT_FLAGS,
-- added BuildPrereq rules,
-- recompiled on rpm 3,
-- package is FHS 2.0 compliant.
-
-* Thu Mar 18 1999 Nicolas Mailhot <Nicolas.Mailhot@email.enst.fr>
-  [0.9.3-2]
-- added directories for a cleaner uninstall.
-
-* Thu Mar 18 1999 Nicolas Mailhot <Nicolas.Mailhot@email.enst.fr>
-  [0.9.3-1]
-- Initial release for WSoundPrefs-0.9.3-1.
