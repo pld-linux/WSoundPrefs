@@ -18,16 +18,16 @@ Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Patch3:		%{name}-wstrappend_bad_use.patch
 Icon:		WSoundPrefs.gif
-BuildRequires:	XFree86-devel
 BuildRequires:	WSoundServer-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
+BuildRequires:	XFree86-devel
+BuildRequires:	audiofile-devel
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
-BuildRequires:	audiofile-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
