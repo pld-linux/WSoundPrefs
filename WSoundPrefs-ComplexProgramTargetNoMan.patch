@@ -1,0 +1,11 @@
+--- WSoundPrefs-1.1.1/src/Imakefile~	Fri Jan 18 09:52:31 2002
++++ WSoundPrefs-1.1.1/src/Imakefile	Fri Jan 18 09:52:31 2002
+@@ -30,7 +30,7 @@
+ SRCS = PLFunctions.c SoundEvents.c SoundPaths.c SystemInfo.c WSoundPrefs.c main.c
+ OBJS = PLFunctions.o SoundEvents.o SoundPaths.o SystemInfo.o WSoundPrefs.o main.o
+ 
+-ComplexProgramTarget(WSoundPrefs)
++ComplexProgramTargetNoMan(WSoundPrefs)
+ 
+ InstallMultiple($(ICONS),$(BINDIR))
+ 
