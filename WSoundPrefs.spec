@@ -11,6 +11,7 @@ Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
+Source1:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
 Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
@@ -75,7 +76,7 @@ xmkmf -a
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Settings/WindowMaker,%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -84,6 +85,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 	TIFFDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -105,3 +107,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
 %{_applnkdir}/Settings/WindowMaker/WSoundPrefs.desktop
+%{_pixmapsdir}/*
