@@ -2,9 +2,11 @@ Summary:	Window Maker Sound Preferences
 Summary(es):	ConfiguraciСn de Sonido para Window Maker
 Summary(pl):	Konfigurator Serwera D╪wiЙku WindowMakera
 Summary(pt_BR):	PreferЙncias de Som do Window Maker
+Summary(ru):	Настройка звуковой поддержки Window Maker
+Summary(uk):	Настройка звуково╖ п╕дтримки Window Maker
 Name:		WSoundPrefs
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
@@ -13,6 +15,7 @@ Source2:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
 Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
+Patch3:		%{name}-wstrappend_bad_use.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
@@ -60,17 +63,37 @@ servidor de som do WindowMaker (WMSound). ProvЙ basicamente as opГУes:
 - quais sЦo as rotas para busca de arquivos sons,
 - carregar e salvar grupos de som.
 
+%description -l ru
+WSoundPrefs - программа для конфигурирования звукового сервера
+оконного менеджера Window Maker (WMSound). Она заменяет предыдущую
+программу того же автора, WMSound Setup (или wmss). Предоставляет
+возможности настройки:
+- Какой звук проигрывать при каких звуковых событиях
+- Какое устройство проигрывания звука использовать
+- Какой путь поиска звуковых файлов и их списков
+- Загрузку и и сохранение списков звуковых файлов
+
+%description -l uk
+WSoundPrefs - програма для конф╕гурування звукового сервера в╕конного
+менеджера Window Maker (WMSound). Вона ╓ зам╕ною попередньо╖ програми
+того ж автора, WMSound Setup (або wmss). Нада╓ можливост╕ настройки:
+- Який звук програвати при настанн╕ певних звукових под╕й
+- Який пристр╕й програвання звуку використовувати
+- Який шлях пошуку звукових файл╕в та ╖х перел╕к╕в
+- Завантаження та збереження перел╕к╕в звукових файл╕в
+
 %prep
 %setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 xmkmf -a
 %{__make} \
 	CC=%{__cc} \
-	CDEBUGFLAGS="%{rpmcflags}" 
+	CDEBUGFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
