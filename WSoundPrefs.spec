@@ -11,7 +11,7 @@ Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
-Source1:	%{name}.png
+Source2:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
 Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
