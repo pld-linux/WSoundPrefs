@@ -1,8 +1,8 @@
 Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
-Version:	0.9.3
-Release:	3
+Version:	1.0.1
+Release:	1
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -23,6 +23,7 @@ Requires:	wmsound
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix /usr/X11R6
+%define _mandir /usr/X11R6/man
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
