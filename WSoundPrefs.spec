@@ -1,8 +1,10 @@
 Summary:	Window Maker Sound Preferences
+Summary(es):	Configuración de Sonido para Window Maker
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
+Summary(pt_BR):	Preferências de Som do Window Maker
 Name:		WSoundPrefs
-Version:	1.1.0
-Release:	5
+Version:	1.1.1
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -10,6 +12,8 @@ Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-soundpaths.patch
+Patch1:		%{name}-WINGs.patch
+Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
@@ -37,24 +41,47 @@ the following options:
 - What are the search-paths for Sounds and SoundSets
 - Loading and Saving of Soundsets
 
+%description -l es
+Configuración de Sonido para Window Maker. Soporta básicamente:
+- que sonido tocar para determinado evento,
+- que dispositivo de sonido usar,
+- cuáles directorios buscar sonidos,
+- cargar y guardar grupos de sonidos.
+
 %description -l pl
 WSoundPrefs jest opartym na bibliotece WINGs konfiguratorem Serwera
 D¼wiêku WindowMakera (WMSound). Jest to nastêpca starszego programu o
 nazwie WMSound Setup (wmss).
 
+%description -l pt_BR
+WSoundPrefs é uma aplicação baseada em WINGS para configurar o
+servidor de som do WindowMaker (WMSound). Provê basicamente as opções:
+- qual som tocar em qual evento,
+- qual dispositivo de som usar,
+- quais são as rotas para busca de arquivos sons,
+- carregar e salvar grupos de som.
+
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 xmkmf -a
-%{__make} CDEBUGFLAGS="%{rpmcflags}" 
+%{__make} \
+	CC=%{__cc} \
+	CDEBUGFLAGS="%{rpmcflags}" 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	BINDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app \
+	XPMDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/ \
+	TIFFDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 
