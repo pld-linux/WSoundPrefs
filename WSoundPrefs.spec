@@ -12,7 +12,6 @@ Patch0:		%{name}-soundpaths.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
