@@ -53,7 +53,7 @@ make CDEBUGFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
