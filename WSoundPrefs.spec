@@ -18,6 +18,7 @@ BuildPrereq:    libpng-devel
 BuildPrereq:    libtiff-devel
 BuildPrereq:    libungif-devel
 BuildPrereq:    zlib-devel
+BuildPrereq:	wmsound-devel
 Requires:	wmsound
 BuildRoot:	/tmp/%{name}-%{version}-root
 
