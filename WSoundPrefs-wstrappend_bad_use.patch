@@ -1,0 +1,25 @@
+--- WSoundPrefs-1.1.1/src/SoundEvents.c.old	Mon Feb 25 17:12:50 2002
++++ WSoundPrefs-1.1.1/src/SoundEvents.c	Mon Feb 25 17:12:53 2002
+@@ -373,13 +373,9 @@
+ 		
+ 		if ((path+strlen(path)-1) != "/") {
+ 			tmp = wstrappend(path, "/");
+-			if (path)
+-				free(path);
+ 			path = tmp;
+ 		}
+ 		tmp = wstrappend(path, file);
+-		if (path)
+-			free(path);
+ 		path = tmp;
+ 		
+ 		if (access(path, F_OK) == 0) {
+@@ -439,8 +435,6 @@
+ 		
+ 		if ((path+strlen(path)-1) != "/") {
+ 			tmp = wstrappend(path, "/");
+-			if (path)
+-				free(path);
+ 			path = tmp;
+ 		}
+ 		
