@@ -21,6 +21,8 @@ BuildPrereq:    zlib-devel
 Requires:	wmsound
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define _prefix         /usr/X11R6
+
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
 Sound Server (WMSound). It is actually a replacement of the Author's older
@@ -46,7 +48,7 @@ make CDEBUGFLAGS="$RPM_OPT_FLAGS"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install DESTDIR=$RPM_BUILD_ROOT/usr/X11R6
+make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
 gzip -9nf ChangeLog
 
@@ -56,16 +58,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog.gz
-%attr(755,root,root) /usr/X11R6/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
+%attr(755,root,root) %{_prefix}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 
-%dir /usr/X11R6/GNUstep/Apps/WSoundPrefs.app
-%dir /usr/X11R6/GNUstep/Apps/WSoundPrefs.app/xpm
-%dir /usr/X11R6/GNUstep/Apps/WSoundPrefs.app/tiff
+%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app
+%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm
+%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff
 
-/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/*.tiff
-/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/*.xpm
-/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
-/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
+%{_prefix}/GNUstep/Apps/WSoundPrefs.app/*.tiff
+%{_prefix}/GNUstep/Apps/WSoundPrefs.app/*.xpm
+%{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
+%{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
 %changelog
 * Sun May 16 1999 Piotr Czerwiñski <pius@pld.org.pl>
