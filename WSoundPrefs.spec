@@ -5,24 +5,24 @@ Version:	0.9.3
 Release:	3
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
-Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
-URL:            http://shadowmere.student.utwente.nl/wmss/
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 Icon:		WSoundPrefs.gif
-BuildPrereq:    XFree86-devel
-BuildPrereq:    xpm-devel
-BuildPrereq:    WindowMaker-devel >= 0.50.0
-BuildPrereq:    libPropList-devel >= 0.8.3
+URL:		http://shadowmere.student.utwente.nl/wmss/
+BuildPrereq:	XFree86-devel
+BuildPrereq:	xpm-devel
+BuildPrereq:	WindowMaker-devel >= 0.50.0
+BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	libjpeg-devel
-BuildPrereq:    libpng-devel
-BuildPrereq:    libtiff-devel
-BuildPrereq:    libungif-devel
-BuildPrereq:    zlib-devel
+BuildPrereq:	libpng-devel
+BuildPrereq:	libtiff-devel
+BuildPrereq:	libungif-devel
+BuildPrereq:	zlib-devel
 BuildPrereq:	wmsound-devel
 Requires:	wmsound
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
+%define _prefix /usr/X11R6
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
