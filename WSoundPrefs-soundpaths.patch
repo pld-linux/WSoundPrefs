@@ -5,7 +5,7 @@
  			wwarning(_("bad value in option SoundPath. Using default path list"));
  		addPathToList(panel->sndL, -1, "~/GNUstep/Library/WindowMaker/Sounds");
 -		addPathToList(panel->sndL, -1, "/usr/local/share/WindowMaker/Sounds");
-+		addPathToList(panel->sndL, -1, "/usr/X11R6/share/WindowMaker/Sounds");
++		addPathToList(panel->sndL, -1, "/usr/share/WindowMaker/Sounds");
  	} else {
  		for (i=0; i<PLGetNumberOfElements(array); i++) {
  			val = PLGetArrayElement(array, i);
@@ -14,7 +14,7 @@
  			wwarning(_("bad value in option SoundSetPath. Using default path list"));
  		addPathToList(panel->sndsetL, -1, "~/GNUstep/Library/WindowMaker/SoundSets");
 -		addPathToList(panel->sndsetL, -1, "/usr/local/share/WindowMaker/SoundSets");
-+		addPathToList(panel->sndsetL, -1, "/usr/X11R6/share/WindowMaker/SoundSets");
++		addPathToList(panel->sndsetL, -1, "/usr/share/WindowMaker/SoundSets");
  	} else {
  		for (i=0; i<PLGetNumberOfElements(array); i++) {
  			val = PLGetArrayElement(array, i);
