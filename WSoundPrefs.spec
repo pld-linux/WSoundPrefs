@@ -5,16 +5,16 @@ Summary(pt_BR):	PreferЙncias de Som do Window Maker
 Summary(ru):	Настройка звуковой поддержки Window Maker
 Summary(uk):	Настройка звуково╖ п╕дтримки Window Maker
 Name:		WSoundPrefs
-Version:	1.1.1
-Release:	2
+Version:	1.1.2
+Release:	0.1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.bz2
-# Source0:	ae4c54ee8085aba1ca2f29718270781d
+Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
+# Source0-md5:	f23250bcded31f7db8ab036e4f0fc05c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
-Patch1:		%{name}-WINGs.patch
+Patch1:		%{name}-api.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Patch3:		%{name}-wstrappend_bad_use.patch
 Icon:		WSoundPrefs.gif
@@ -29,9 +29,6 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define 	_prefix 	/usr/X11R6
-%define 	_mandir 	%{_prefix}/man
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
@@ -97,15 +94,15 @@ xmkmf -a
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Settings/WindowMaker,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	BINDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app \
-	XPMDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/ \
-	TIFFDIR=%{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/
+	BINDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app \
+	XPMDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm/ \
+	TIFFDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff/
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -114,16 +111,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS
-%attr(755,root,root) %{_prefix}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
+%attr(755,root,root) %{_libdir}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 
-%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app
-%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm
-%dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff
+%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app
+%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm
+%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff
 
-%{_prefix}/GNUstep/Apps/WSoundPrefs.app/*.tiff
-%{_prefix}/GNUstep/Apps/WSoundPrefs.app/*.xpm
-%{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
-%{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
+%{_libdir}/GNUstep/Apps/WSoundPrefs.app/*.tiff
+%{_libdir}/GNUstep/Apps/WSoundPrefs.app/*.xpm
+%{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
+%{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
-%{_applnkdir}/Settings/WindowMaker/WSoundPrefs.desktop
+%{_desktopdir}/WSoundPrefs.desktop
 %{_pixmapsdir}/*
