@@ -51,11 +51,11 @@ make CDEBUGFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/etc/X11/applnk/Utilities 
+install -d $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities 
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -76,4 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
-/etc/X11/applnk/Utilities/WSoundPrefs.desktop
+/usr/X11R6/share/applnk/Utilities/WSoundPrefs.desktop
