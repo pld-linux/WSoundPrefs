@@ -23,11 +23,10 @@ BuildRequires:	zlib-devel
 BuildRequires:	audiofile-devel
 BuildRequires:	WSoundServer-devel
 Requires:	WindowMaker >= 0.60.0
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
