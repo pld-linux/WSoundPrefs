@@ -10,7 +10,7 @@ Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.bz2
-# Source0:	aa
+# Source0:	ae4c54ee8085aba1ca2f29718270781d
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
