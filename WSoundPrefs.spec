@@ -1,29 +1,30 @@
 Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
-Version:	1.0.1
+Version:	1.1.0
 Release:	1
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
+Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
-BuildPrereq:	WindowMaker-devel >= 0.50.0
+BuildPrereq:	WindowMaker-devel >= 0.60.0
 BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	libjpeg-devel
 BuildPrereq:	libpng-devel
 BuildPrereq:	libtiff-devel
 BuildPrereq:	libungif-devel
 BuildPrereq:	zlib-devel
-BuildPrereq:	wmsound-devel
-Requires:	wmsound
+BuildPrereq:	audiofile-devel
+BuildPrereq:	WSoundServer-devel
+Requires:	WindowMaker >= 0.60.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix /usr/X11R6
-%define _mandir /usr/X11R6/man
+%define _mandir %{_prefix}/man
 
 %description
 WSoundPrefs is a WINGs-based application to configure the Window Maker
@@ -52,14 +53,14 @@ rm -rf $RPM_BUILD_ROOT
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
-gzip -9nf ChangeLog
+gzip -9nf ChangeLog AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.gz
+%doc {ChangeLog,AUTHORS}.gz
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 
 %dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app
@@ -72,6 +73,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
 %changelog
+* Mon Jul 05 1999 Piotr Czerwiñski <pius@pld.org.pl> 
+  [1.1.0-1]
+- updated to 1.1.0,
+- spec file cleanup.
+
 * Sun May 16 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [0.9.3-3]
 - modified a bit spec file for PLD use,
