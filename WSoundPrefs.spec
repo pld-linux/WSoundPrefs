@@ -48,15 +48,15 @@ nazwie WMSound Setup (wmss).
 
 %build
 xmkmf -a
-%{__make} CDEBUGFLAGS="%{rpmcflags}"
+%{__make} CDEBUGFLAGS="%{rpmcflags}" 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -77,4 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
-%{_applnkdir}/Settings/WSoundPrefs.desktop
+%{_applnkdir}/Settings/WindowMaker/WSoundPrefs.desktop
