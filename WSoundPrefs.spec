@@ -2,18 +2,18 @@ Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
 Version:	1.1.0
-Release: 4
+Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
-Source1:	WSoundPrefs.desktop
-Patch0:		WSoundPrefs-soundpaths.patch
+Source1:	%{name}.desktop
+Patch0:		%{name}-soundpaths.patch
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRequires:	WindowMaker-devel >= 0.60.0
+BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
@@ -22,7 +22,6 @@ BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
 BuildRequires:	audiofile-devel
 BuildRequires:	WSoundServer-devel
-Requires:	WindowMaker >= 0.60.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
