@@ -10,17 +10,17 @@ Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.
 Source1:	WSoundPrefs.desktop
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
-BuildPrereq:	WindowMaker-devel >= 0.60.0
-BuildPrereq:	libPropList-devel >= 0.8.3
-BuildPrereq:	libjpeg-devel
-BuildPrereq:	libpng-devel
-BuildPrereq:	libtiff-devel
-BuildPrereq:	libungif-devel
-BuildPrereq:	zlib-devel
-BuildPrereq:	audiofile-devel
-BuildPrereq:	WSoundServer-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
+BuildRequires:	WindowMaker-devel >= 0.60.0
+BuildRequires:	libPropList-devel >= 0.8.3
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libtiff-devel
+BuildRequires:	libungif-devel
+BuildRequires:	zlib-devel
+BuildRequires:	audiofile-devel
+BuildRequires:	WSoundServer-devel
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
