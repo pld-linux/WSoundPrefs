@@ -9,7 +9,7 @@ Version:	1.1.1
 Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-soundpaths.patch
@@ -17,8 +17,8 @@ Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Patch3:		%{name}-wstrappend_bad_use.patch
 Icon:		WSoundPrefs.gif
-URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildRequires:	XFree86-devel
+BuildRequires:	WSoundServer-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
@@ -27,7 +27,6 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
 BuildRequires:	audiofile-devel
-BuildRequires:	WSoundServer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
@@ -108,14 +107,12 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Settings/WindowMaker,%{_pixmapsdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf ChangeLog AUTHORS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {ChangeLog,AUTHORS}.gz
+%doc ChangeLog AUTHORS
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 
 %dir %{_prefix}/GNUstep/Apps/WSoundPrefs.app
