@@ -6,7 +6,8 @@ Release:	1
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source1:	WSoundPrefs.desktop
 Icon:		WSoundPrefs.gif
 URL:		http://shadowmere.student.utwente.nl/wmss/
 BuildPrereq:	XFree86-devel
@@ -50,8 +51,11 @@ make CDEBUGFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT/etc/X11/applnk/Utilities 
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
+
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -71,6 +75,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
+
+/etc/X11/applnk/Utilities/WSoundPrefs.desktop
 
 %changelog
 * Mon Jul 05 1999 Piotr Czerwiñski <pius@pld.org.pl> 
