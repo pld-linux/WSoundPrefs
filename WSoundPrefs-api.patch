@@ -1,0 +1,24 @@
+diff -ur WSoundPrefs-1.1.2.orig/src/WSoundPrefs.c WSoundPrefs-1.1.2/src/WSoundPrefs.c
+--- WSoundPrefs-1.1.2.orig/src/WSoundPrefs.c	2001-01-28 17:16:57.000000000 +0100
++++ WSoundPrefs-1.1.2/src/WSoundPrefs.c	2004-11-07 20:42:37.190121560 +0100
+@@ -407,7 +407,7 @@
+ 		WMResizeWidget(panel->copyrightL, 448, 20);
+ 		WMMoveWidget(panel->copyrightL, 8, 178);
+ 		WMSetLabelTextAlignment(panel->copyrightL, WACenter);
+-		font = WMCreateNormalFont(scr, "-*-helvetica-medium-r-normal-*-10-*-*-*-*-*-*-*");
++		font = WMCreateFont(scr, "-*-helvetica-medium-r-normal-*-10-*-*-*-*-*-*-*");
+ 		if (font)
+ 			WMSetLabelText(panel->copyrightL, "Copyright \xa9 1999 The Az\xe5rg-r\xfbh");
+ 		else {
+diff -ur WSoundPrefs-1.1.2.orig/src/main.c WSoundPrefs-1.1.2/src/main.c
+--- WSoundPrefs-1.1.2.orig/src/main.c	2001-01-28 17:21:22.000000000 +0100
++++ WSoundPrefs-1.1.2/src/main.c	2004-11-07 20:43:03.789077904 +0100
+@@ -109,7 +109,7 @@
+ 			wwarning(_("could not load image file %s:%s"), path, RMessageForError(RErrorCode));
+ 		else {
+ 			icon = WMCreatePixmapFromRImage(scr, tmp, 0);
+-			RDestroyImage(tmp);
++			RReleaseImage(tmp);
+ 			if (icon) {
+ 				WMSetApplicationIconImage(scr, icon);
+ 				WMReleasePixmap(icon);
