@@ -2,7 +2,7 @@ Summary:	Window Maker Sound Preferences
 Summary(pl):	Konfigurator Serwera D¼wiêku WindowMakera
 Name:		WSoundPrefs
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -57,7 +57,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
 make install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings
 
 gzip -9nf ChangeLog AUTHORS
 
@@ -78,4 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
 %{_prefix}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
 
-%{_applnkdir}/Utilities/WSoundPrefs.desktop
+%{_applnkdir}/Settings/WSoundPrefs.desktop
