@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=WSoundPrefs
 Comment=WindowMaker Sound Preferences
-Comment[pl]=Konfigurator Serwera Dźwięku WindowMakera
-Icon=/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs.xpm
+Comment[es]=Configuraci�n de Sonido para Window Maker
+Comment[pl]=Konfigurator Serwera D¼wiiêku WindowMakera
+Comment[pt_BR]=Prefer�ncias de Som do Window Maker
+Icon=WSoundPrefs.png
 Exec=/usr/X11R6/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 Terminal=0
 Type=Application
