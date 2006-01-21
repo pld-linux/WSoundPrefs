@@ -17,7 +17,6 @@ Patch0:		%{name}-soundpaths.patch
 Patch1:		%{name}-api.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Patch3:		%{name}-wstrappend_bad_use.patch
-Icon:		WSoundPrefs.gif
 BuildRequires:	WSoundServer-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	XFree86-devel
