@@ -88,7 +88,7 @@ WSoundPrefs - програма для конф╕гурування звукового сервера в╕конного
 %build
 xmkmf -a
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CDEBUGFLAGS="%{rpmcflags}"
 
 %install
