@@ -9,8 +9,7 @@ Version:	1.1.2
 Release:	0.1
 License:	GPL
 Group:		X11/Window Managers/Tools
-#Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
-Source0:	http://voins.program.ru/WSoundPrefs-1.1.2.tar.gz
+Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	f23250bcded31f7db8ab036e4f0fc05c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
