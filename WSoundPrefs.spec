@@ -9,7 +9,8 @@ Version:	1.1.2
 Release:	0.1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
+#Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
+Source0:	http://voins.program.ru/WSoundPrefs-1.1.2.tar.gz
 # Source0-md5:	f23250bcded31f7db8ab036e4f0fc05c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -17,9 +18,9 @@ Patch0:		%{name}-soundpaths.patch
 Patch1:		%{name}-api.patch
 Patch2:		%{name}-ComplexProgramTargetNoMan.patch
 Patch3:		%{name}-wstrappend_bad_use.patch
+Patch4:		%{name}-x.patch
 BuildRequires:	WSoundServer-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
-BuildRequires:	XFree86-devel
 BuildRequires:	audiofile-devel
 BuildRequires:	giflib-devel
 BuildRequires:	libPropList-devel >= 0.8.3
@@ -84,6 +85,7 @@ WSoundPrefs - програма для конф╕гурування звукового сервера в╕конного
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 xmkmf -a
@@ -97,9 +99,9 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	BINDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app \
-	XPMDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm/ \
-	TIFFDIR=%{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff/
+	BINDIR=%{_libdir}/GNUstep/Applications/WSoundPrefs.app \
+	XPMDIR=%{_libdir}/GNUstep/Applications/WSoundPrefs.app/xpm/ \
+	TIFFDIR=%{_libdir}/GNUstep/Applications/WSoundPrefs.app/tiff/
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -110,16 +112,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS
-%attr(755,root,root) %{_libdir}/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
+%attr(755,root,root) %{_libdir}/GNUstep/Applications/WSoundPrefs.app/WSoundPrefs
 
-%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app
-%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm
-%dir %{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff
+%dir %{_libdir}/GNUstep/Applications/WSoundPrefs.app
+%dir %{_libdir}/GNUstep/Applications/WSoundPrefs.app/xpm
+%dir %{_libdir}/GNUstep/Applications/WSoundPrefs.app/tiff
 
-%{_libdir}/GNUstep/Apps/WSoundPrefs.app/*.tiff
-%{_libdir}/GNUstep/Apps/WSoundPrefs.app/*.xpm
-%{_libdir}/GNUstep/Apps/WSoundPrefs.app/xpm/*.xpm
-%{_libdir}/GNUstep/Apps/WSoundPrefs.app/tiff/*.tiff
+%{_libdir}/GNUstep/Applications/WSoundPrefs.app/*.tiff
+%{_libdir}/GNUstep/Applications/WSoundPrefs.app/*.xpm
+%{_libdir}/GNUstep/Applications/WSoundPrefs.app/xpm/*.xpm
+%{_libdir}/GNUstep/Applications/WSoundPrefs.app/tiff/*.tiff
 
 %{_desktopdir}/WSoundPrefs.desktop
 %{_pixmapsdir}/*
