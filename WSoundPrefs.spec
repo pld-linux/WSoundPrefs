@@ -1,9 +1,9 @@
 Summary:	Window Maker Sound Preferences
-Summary(es):	ConfiguraciСn de Sonido para Window Maker
-Summary(pl):	Konfigurator Serwera D╪wiЙku WindowMakera
-Summary(pt_BR):	PreferЙncias de Som do Window Maker
-Summary(ru):	Настройка звуковой поддержки Window Maker
-Summary(uk):	Настройка звуково╖ п╕дтримки Window Maker
+Summary(es.UTF-8):   ConfiguraciцЁn de Sonido para Window Maker
+Summary(pl.UTF-8):   Konfigurator Serwera Dе╨wiд≥ku WindowMakera
+Summary(pt_BR.UTF-8):   Preferц╙ncias de Som do Window Maker
+Summary(ru.UTF-8):   п²п╟я│я┌я─п╬п╧п╨п╟ п╥п╡я┐п╨п╬п╡п╬п╧ п©п╬п╢п╢п╣я─п╤п╨п╦ Window Maker
+Summary(uk.UTF-8):   п²п╟я│я┌я─п╬п╧п╨п╟ п╥п╡я┐п╨п╬п╡п╬я≈ п©я√п╢я┌я─п╦п╪п╨п╦ Window Maker
 Name:		WSoundPrefs
 Version:	1.1.2
 Release:	0.1
@@ -38,44 +38,44 @@ the following options:
 - What are the search-paths for Sounds and SoundSets
 - Loading and Saving of Soundsets
 
-%description -l es
-ConfiguraciСn de Sonido para Window Maker. Soporta bАsicamente:
+%description -l es.UTF-8
+ConfiguraciцЁn de Sonido para Window Maker. Soporta bц║sicamente:
 - que sonido tocar para determinado evento,
 - que dispositivo de sonido usar,
-- cuАles directorios buscar sonidos,
+- cuц║les directorios buscar sonidos,
 - cargar y guardar grupos de sonidos.
 
-%description -l pl
+%description -l pl.UTF-8
 WSoundPrefs jest opartym na bibliotece WINGs konfiguratorem Serwera
-D╪wiЙku WindowMakera (WMSound). Jest to nastЙpca starszego programu o
+Dе╨wiд≥ku WindowMakera (WMSound). Jest to nastд≥pca starszego programu o
 nazwie WMSound Setup (wmss).
 
-%description -l pt_BR
-WSoundPrefs И uma aplicaГЦo baseada em WINGS para configurar o
-servidor de som do WindowMaker (WMSound). ProvЙ basicamente as opГУes:
+%description -l pt_BR.UTF-8
+WSoundPrefs ц╘ uma aplicaц╖цёo baseada em WINGS para configurar o
+servidor de som do WindowMaker (WMSound). Provц╙ basicamente as opц╖ц╣es:
 - qual som tocar em qual evento,
 - qual dispositivo de som usar,
-- quais sЦo as rotas para busca de arquivos sons,
+- quais sцёo as rotas para busca de arquivos sons,
 - carregar e salvar grupos de som.
 
-%description -l ru
-WSoundPrefs - программа для конфигурирования звукового сервера
-оконного менеджера Window Maker (WMSound). Она заменяет предыдущую
-программу того же автора, WMSound Setup (или wmss). Предоставляет
-возможности настройки:
-- Какой звук проигрывать при каких звуковых событиях
-- Какое устройство проигрывания звука использовать
-- Какой путь поиска звуковых файлов и их списков
-- Загрузку и и сохранение списков звуковых файлов
+%description -l ru.UTF-8
+WSoundPrefs - п©я─п╬пЁя─п╟п╪п╪п╟ п╢п╩я▐ п╨п╬п╫я└п╦пЁя┐я─п╦я─п╬п╡п╟п╫п╦я▐ п╥п╡я┐п╨п╬п╡п╬пЁп╬ я│п╣я─п╡п╣я─п╟
+п╬п╨п╬п╫п╫п╬пЁп╬ п╪п╣п╫п╣п╢п╤п╣я─п╟ Window Maker (WMSound). п·п╫п╟ п╥п╟п╪п╣п╫я▐п╣я┌ п©я─п╣п╢я▀п╢я┐я┴я┐я▌
+п©я─п╬пЁя─п╟п╪п╪я┐ я┌п╬пЁп╬ п╤п╣ п╟п╡я┌п╬я─п╟, WMSound Setup (п╦п╩п╦ wmss). п÷я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌
+п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦ п╫п╟я│я┌я─п╬п╧п╨п╦:
+- п п╟п╨п╬п╧ п╥п╡я┐п╨ п©я─п╬п╦пЁя─я▀п╡п╟я┌я▄ п©я─п╦ п╨п╟п╨п╦я┘ п╥п╡я┐п╨п╬п╡я▀я┘ я│п╬п╠я▀я┌п╦я▐я┘
+- п п╟п╨п╬п╣ я┐я│я┌я─п╬п╧я│я┌п╡п╬ п©я─п╬п╦пЁя─я▀п╡п╟п╫п╦я▐ п╥п╡я┐п╨п╟ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄
+- п п╟п╨п╬п╧ п©я┐я┌я▄ п©п╬п╦я│п╨п╟ п╥п╡я┐п╨п╬п╡я▀я┘ я└п╟п╧п╩п╬п╡ п╦ п╦я┘ я│п©п╦я│п╨п╬п╡
+- п≈п╟пЁя─я┐п╥п╨я┐ п╦ п╦ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ я│п©п╦я│п╨п╬п╡ п╥п╡я┐п╨п╬п╡я▀я┘ я└п╟п╧п╩п╬п╡
 
-%description -l uk
-WSoundPrefs - програма для конф╕гурування звукового сервера в╕конного
-менеджера Window Maker (WMSound). Вона ╓ зам╕ною попередньо╖ програми
-того ж автора, WMSound Setup (або wmss). Нада╓ можливост╕ настройки:
-- Який звук програвати при настанн╕ певних звукових под╕й
-- Який пристр╕й програвання звуку використовувати
-- Який шлях пошуку звукових файл╕в та ╖х перел╕к╕в
-- Завантаження та збереження перел╕к╕в звукових файл╕в
+%description -l uk.UTF-8
+WSoundPrefs - п©я─п╬пЁя─п╟п╪п╟ п╢п╩я▐ п╨п╬п╫я└я√пЁя┐я─я┐п╡п╟п╫п╫я▐ п╥п╡я┐п╨п╬п╡п╬пЁп╬ я│п╣я─п╡п╣я─п╟ п╡я√п╨п╬п╫п╫п╬пЁп╬
+п╪п╣п╫п╣п╢п╤п╣я─п╟ Window Maker (WMSound). п▓п╬п╫п╟ я■ п╥п╟п╪я√п╫п╬я▌ п©п╬п©п╣я─п╣п╢п╫я▄п╬я≈ п©я─п╬пЁя─п╟п╪п╦
+я┌п╬пЁп╬ п╤ п╟п╡я┌п╬я─п╟, WMSound Setup (п╟п╠п╬ wmss). п²п╟п╢п╟я■ п╪п╬п╤п╩п╦п╡п╬я│я┌я√ п╫п╟я│я┌я─п╬п╧п╨п╦:
+- п╞п╨п╦п╧ п╥п╡я┐п╨ п©я─п╬пЁя─п╟п╡п╟я┌п╦ п©я─п╦ п╫п╟я│я┌п╟п╫п╫я√ п©п╣п╡п╫п╦я┘ п╥п╡я┐п╨п╬п╡п╦я┘ п©п╬п╢я√п╧
+- п╞п╨п╦п╧ п©я─п╦я│я┌я─я√п╧ п©я─п╬пЁя─п╟п╡п╟п╫п╫я▐ п╥п╡я┐п╨я┐ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐п╡п╟я┌п╦
+- п╞п╨п╦п╧ я┬п╩я▐я┘ п©п╬я┬я┐п╨я┐ п╥п╡я┐п╨п╬п╡п╦я┘ я└п╟п╧п╩я√п╡ я┌п╟ я≈я┘ п©п╣я─п╣п╩я√п╨я√п╡
+- п≈п╟п╡п╟п╫я┌п╟п╤п╣п╫п╫я▐ я┌п╟ п╥п╠п╣я─п╣п╤п╣п╫п╫я▐ п©п╣я─п╣п╩я√п╨я√п╡ п╥п╡я┐п╨п╬п╡п╦я┘ я└п╟п╧п╩я√п╡
 
 %prep
 %setup -q
