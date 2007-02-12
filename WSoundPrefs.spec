@@ -1,9 +1,9 @@
 Summary:	Window Maker Sound Preferences
-Summary(es.UTF-8):   Configuración de Sonido para Window Maker
-Summary(pl.UTF-8):   Konfigurator Serwera Dźwięku WindowMakera
-Summary(pt_BR.UTF-8):   Preferências de Som do Window Maker
-Summary(ru.UTF-8):   Настройка звуковой поддержки Window Maker
-Summary(uk.UTF-8):   Настройка звукової підтримки Window Maker
+Summary(es.UTF-8):	Configuración de Sonido para Window Maker
+Summary(pl.UTF-8):	Konfigurator Serwera Dźwięku WindowMakera
+Summary(pt_BR.UTF-8):	Preferências de Som do Window Maker
+Summary(ru.UTF-8):	Настройка звуковой поддержки Window Maker
+Summary(uk.UTF-8):	Настройка звукової підтримки Window Maker
 Name:		WSoundPrefs
 Version:	1.1.2
 Release:	0.1
