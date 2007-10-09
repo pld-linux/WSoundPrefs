@@ -1,0 +1,4 @@
+- updated to 1.1.1 (long time not updated package),
+- merge translations from Conectiva,
+- added ComplexProgramTargetNoMan, WINGs which fixes building WSoundPrefs
+  in current environment.
