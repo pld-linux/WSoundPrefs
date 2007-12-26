@@ -8,6 +8,5 @@ Icon=WSoundPrefs
 Exec=/usr/lib/GNUstep/Apps/WSoundPrefs.app/WSoundPrefs
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Settings;DesktopSettings;
 # vi: encoding=utf-8
